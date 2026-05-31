@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>アクセス・地図｜街のデジタル塾 スマイル</title>
+  <meta name="description" content="街のデジタル塾スマイルへのアクセス方法。○○駅より徒歩5分。Googleマップで場所を確認できます。">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="access.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="header" id="header">
+  <div class="header__inner">
+    <a href="index.html" class="header__logo">
+      <div class="header__logo-icon">
+        <svg width="36" height="36" viewBox="0 0 36 36" fill="none">
+          <circle cx="18" cy="18" r="18" fill="#F7941D"/>
+          <circle cx="13" cy="14" r="3" fill="white"/>
+          <circle cx="23" cy="14" r="3" fill="white"/>
+          <path d="M10 22 Q18 28 26 22" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+        </svg>
+      </div>
+      <div class="header__logo-text">
+        <span class="header__logo-sub">街のデジタル塾</span>
+        <span class="header__logo-main">スマイル</span>
+      </div>
+    </a>
+
+    <nav class="header__nav" id="nav">
+      <ul class="header__nav-list">
+        <li><a href="index.html" class="header__nav-link">
+          <span class="header__nav-icon">🏠</span>ホーム
+        </a></li>
+        <li><a href="index.html#courses" class="header__nav-link">
+          <span class="header__nav-icon">📋</span>コース・料金
+        </a></li>
+        <li><a href="index.html#classroom" class="header__nav-link">
+          <span class="header__nav-icon">📷</span>教室の様子
+        </a></li>
+        <li><a href="index.html#faq" class="header__nav-link">
+          <span class="header__nav-icon">❓</span>よくある質問
+        </a></li>
+        <li><a href="index.html#contact" class="header__nav-link">
+          <span class="header__nav-icon">✉️</span>お問い合わせ
+        </a></li>
+        <li><a href="access.html" class="header__nav-link active">
+          <span class="header__nav-icon">📍</span>アクセス
+        </a></li>
+      </ul>
+    </nav>
+
+    <div class="header__tel">
+      <p class="header__tel-label">お気軽にお電話ください</p>
+      <a href="tel:0120123456" class="header__tel-number">0120-123-456</a>
+      <p class="header__tel-hours">受付時間 9:00〜17:00（日・祝休み）</p>
+    </div>
+
+    <a href="tel:0120123456" class="btn-tel-header">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="white"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      電話する
+    </a>
+
+    <button class="hamburger" id="hamburger" aria-label="メニューを開く">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Nav Overlay -->
+<div class="nav-overlay" id="navOverlay"></div>
+<nav class="mobile-nav" id="mobileNav">
+  <button class="mobile-nav__close" id="mobileNavClose">✕</button>
+  <ul>
+    <li><a href="index.html" onclick="closeMobileNav()">🏠 ホーム</a></li>
+    <li><a href="index.html#courses" onclick="closeMobileNav()">📋 コース・料金</a></li>
+    <li><a href="index.html#classroom" onclick="closeMobileNav()">📷 教室の様子</a></li>
+    <li><a href="index.html#faq" onclick="closeMobileNav()">❓ よくある質問</a></li>
+    <li><a href="index.html#contact" onclick="closeMobileNav()">✉️ お問い合わせ</a></li>
+    <li><a href="access.html" onclick="closeMobileNav()">📍 アクセス</a></li>
+  </ul>
+  <div class="mobile-nav__cta">
+    <a href="tel:0120123456" class="btn-tel-mobile">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+      0120-123-456
+    </a>
+    <a href="https://line.me" class="btn-line-mobile">
+      <svg width="22" height="22" viewBox="0 0 44 44" fill="white"><path d="M22 4C12.06 4 4 11.16 4 19.9c0 7.9 6.61 14.52 15.57 15.72l-3.38 4.03c-.22.26-.05.65.27.65h11.08c.32 0 .49-.39.27-.65l-3.38-4.03C33.39 34.42 40 27.8 40 19.9 40 11.16 31.94 4 22 4z"/></svg>
+      友だち追加する
+    </a>
+  </div>
+</nav>
+
+<!-- ========== PAGE HERO ========== -->
+<section class="page-hero">
+  <div class="page-hero__inner">
+    <nav class="breadcrumb" aria-label="パンくずリスト">
+      <ol>
+        <li><a href="index.html">ホーム</a></li>
+        <li aria-current="page">アクセス・地図</li>
+      </ol>
+    </nav>
+    <h1 class="page-hero__title">
+      <span class="page-hero__icon">📍</span>
+      アクセス・地図
+    </h1>
+    <p class="page-hero__desc">○○駅より徒歩5分。明るく通いやすい立地です。</p>
+  </div>
+</section>
+
+<!-- ========== MAP + INFO ========== -->
+<section class="access-section">
+  <div class="container">
+    <div class="access-grid">
+
+      <!-- 地図 -->
+      <div class="map-wrapper">
+        <div class="map-label">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#F7941D"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Googleマップで現在地からのルートを確認できます
+        </div>
+        <!-- Google Map 埋め込み（実際の住所に変更してください） -->
+        <div class="map-embed">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3240.827853132924!2d139.7671248152583!3d35.68123498019537!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60188bfbd89f700b%3A0x277c49ba34ed38!2z5p2x5Lqs6aeF!5e0!3m2!1sja!2sjp!4v1620000000000!5m2!1sja!2sjp"
+            width="100%"
+            height="480"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="街のデジタル塾スマイル 地図"
+          ></iframe>
+        </div>
+        <a
+          href="https://www.google.com/maps/search/東京都○○市○○町1-2-3"
+          target="_blank"
+          rel="noopener"
+          class="btn-open-map"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          Googleマップで大きく見る（別タブで開きます）
+        </a>
+      </div>
+
+      <!-- 住所・アクセス情報 -->
+      <div class="access-info">
+
+        <!-- 住所 -->
+        <div class="info-card">
+          <div class="info-card__header">
+            <div class="info-card__icon info-card__icon--orange">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            </div>
+            <h2 class="info-card__title">住所</h2>
+          </div>
+          <div class="info-card__body">
+            <p class="info-address">
+              〒123-4567<br>
+              東京都○○市○○町1-2-3<br>
+              ○○ビル 2F
+            </p>
+          </div>
+        </div>
+
+        <!-- 電車 -->
+        <div class="info-card">
+          <div class="info-card__header">
+            <div class="info-card__icon info-card__icon--blue">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm3.5 1c-.83 0-1.5-.67-1.5-1.5S6.67 14 7.5 14s1.5.67 1.5 1.5S8.33 17 7.5 17zm9 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm1.5-6H6V6h12v5z"/></svg>
+            </div>
+            <h2 class="info-card__title">電車でお越しの方</h2>
+          </div>
+          <div class="info-card__body">
+            <ul class="access-list">
+              <li class="access-list__item">
+                <span class="access-list__badge access-list__badge--walk">徒歩</span>
+                <div>
+                  <strong>○○線 ○○駅</strong>より<br>
+                  北口を出て直進、徒歩約 <strong class="accent">5分</strong>
+                </div>
+              </li>
+              <li class="access-list__item">
+                <span class="access-list__badge access-list__badge--walk">徒歩</span>
+                <div>
+                  <strong>△△線 △△駅</strong>より<br>
+                  東口から左折、徒歩約 <strong class="accent">8分</strong>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- バス -->
+        <div class="info-card">
+          <div class="info-card__header">
+            <div class="info-card__icon info-card__icon--green">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M4 16c0 .88.39 1.67 1 2.22V20c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1h8v1c0 .55.45 1 1 1h1c.55 0 1-.45 1-1v-1.78c.61-.55 1-1.34 1-2.22V6c0-3.5-3.58-4-8-4s-8 .5-8 4v10zm7-11h1v1h-1V5zm-5 0h4v4H6V5zm0 5h12v4H6v-4zm1 7c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1zm10 0c-.55 0-1-.45-1-1s.45-1 1-1 1 .45 1 1-.45 1-1 1z"/></svg>
+            </div>
+            <h2 class="info-card__title">バスでお越しの方</h2>
+          </div>
+          <div class="info-card__body">
+            <ul class="access-list">
+              <li class="access-list__item">
+                <span class="access-list__badge access-list__badge--bus">バス</span>
+                <div>
+                  <strong>○○バス「○○停留所」</strong>下車<br>
+                  徒歩約 <strong class="accent">1分</strong>（目の前）
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- 駐車場 -->
+        <div class="info-card">
+          <div class="info-card__header">
+            <div class="info-card__icon info-card__icon--gray">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="white"><path d="M13 3H6v18h4v-6h3c3.31 0 6-2.69 6-6s-2.69-6-6-6zm.2 8H10V7h3.2c1.1 0 2 .9 2 2s-.9 2-2 2z"/></svg>
+            </div>
+            <h2 class="info-card__title">駐車場について</h2>
+          </div>
+          <div class="info-card__body">
+            <p class="info-text">
+              専用駐車場はございません。近隣のコインパーキングをご利用ください。<br>
+              <small>（徒歩1〜2分以内に複数のコインパーキングがございます）</small>
+            </p>
+          </div>
+        </div>
+
+        <!-- 営業時間 -->
+        <div class="info-card info-card--highlight">
+          <div class="info-card__header">
+            <div class="info-card__icon info-card__icon--white">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="#F7941D"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+            </div>
+            <h2 class="info-card__title info-card__title--orange">受付・営業時間</h2>
+          </div>
+          <div class="info-card__body">
+            <table class="hours-table">
+              <tbody>
+                <tr>
+                  <th>月〜金</th>
+                  <td><strong>9:00〜17:00</strong></td>
+                  <td class="open-badge">受付中</td>
+                </tr>
+                <tr>
+                  <th>土曜日</th>
+                  <td><strong>9:00〜13:00</strong></td>
+                  <td class="open-badge">受付中</td>
+                </tr>
+                <tr>
+                  <th>日・祝日</th>
+                  <td>休業</td>
+                  <td class="closed-badge">休業日</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div><!-- /.access-info -->
+    </div><!-- /.access-grid -->
+  </div>
+</section>
+
+<!-- ========== 道順ガイド ========== -->
+<section class="route-guide">
+  <div class="container">
+    <div class="section-header section-header--center">
+      <h2 class="section-title">駅からの道順ガイド</h2>
+      <p class="route-guide__sub">○○駅 北口からのルートをご案内します</p>
+    </div>
+    <div class="route-steps">
+      <div class="route-step">
+        <div class="route-step__num">1</div>
+        <div class="route-step__img">
+          <img src="image/photo_10_sky_clouds.png" alt="○○駅 北口" loading="lazy">
+        </div>
+        <div class="route-step__text">
+          <h3>○○駅 北口を出ます</h3>
+          <p>改札を出たら北口の出口へ向かいます。エレベーターもご利用いただけます。</p>
+        </div>
+      </div>
+      <div class="route-step__arrow">↓</div>
+      <div class="route-step">
+        <div class="route-step__num">2</div>
+        <div class="route-step__img">
+          <img src="image/photo_09_green_leaves.png" alt="大通りを直進" loading="lazy">
+        </div>
+        <div class="route-step__text">
+          <h3>大通りを直進（約3分）</h3>
+          <p>北口を出て大通りをまっすぐ進みます。コンビニを目印にしてください。</p>
+        </div>
+      </div>
+      <div class="route-step__arrow">↓</div>
+      <div class="route-step">
+        <div class="route-step__num">3</div>
+        <div class="route-step__img">
+          <img src="image/photo_08_house_model.png" alt="○○ビル 2F" loading="lazy">
+        </div>
+        <div class="route-step__text">
+          <h3>○○ビル 2F に到着！</h3>
+          <p>オレンジ色の看板が目印です。エレベーターで2階へお越しください。迷ったらお電話ください。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="access-cta">
+  <div class="container">
+    <div class="access-cta__inner">
+      <h2 class="access-cta__title">まずはお気軽にご連絡ください</h2>
+      <p class="access-cta__desc">無料体験レッスン随時受付中！<br>わからないことはお電話でもお気軽にどうぞ。</p>
+      <div class="access-cta__btns">
+        <a href="tel:0120123456" class="access-cta__tel">
+          <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+          0120-123-456
+        </a>
+        <a href="index.html#contact" class="access-cta__form">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          メールで問い合わせる
+        </a>
+        <a href="https://line.me" target="_blank" rel="noopener" class="access-cta__line">
+          <svg width="22" height="22" viewBox="0 0 44 44" fill="white"><path d="M22 4C12.06 4 4 11.16 4 19.9c0 7.9 6.61 14.52 15.57 15.72l-3.38 4.03c-.22.26-.05.65.27.65h11.08c.32 0 .49-.39.27-.65l-3.38-4.03C33.39 34.42 40 27.8 40 19.9 40 11.16 31.94 4 22 4z"/></svg>
+          LINEで問い合わせる
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__logo">
+      <div class="footer__logo-icon">
+        <svg width="28" height="28" viewBox="0 0 36 36" fill="none"><circle cx="18" cy="18" r="18" fill="#F7941D"/><circle cx="13" cy="14" r="3" fill="white"/><circle cx="23" cy="14" r="3" fill="white"/><path d="M10 22 Q18 28 26 22" stroke="white" stroke-width="2.5" stroke-linecap="round" fill="none"/></svg>
+      </div>
+      <div>
+        <span class="footer__logo-sub">街のデジタル塾</span>
+        <span class="footer__logo-main">スマイル</span>
+      </div>
+    </div>
+    <nav class="footer__nav">
+      <a href="index.html">ホーム</a>
+      <a href="index.html#courses">コース・料金</a>
+      <a href="index.html#classroom">教室の様子</a>
+      <a href="index.html#faq">よくある質問</a>
+      <a href="index.html#contact">お問い合わせ</a>
+      <a href="access.html">アクセス</a>
+      <a href="#">プライバシーポリシー</a>
+    </nav>
+    <p class="footer__copy">© 2024 Machi no Digital Juku Smile</p>
+  </div>
+</footer>
+
+<!-- Float CTA (mobile) -->
+<div class="float-cta" id="floatCta">
+  <a href="tel:0120123456" class="float-cta__tel">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>
+    電話する
+  </a>
+  <a href="https://line.me" class="float-cta__line">
+    <svg width="22" height="22" viewBox="0 0 44 44" fill="white"><path d="M22 4C12.06 4 4 11.16 4 19.9c0 7.9 6.61 14.52 15.57 15.72l-3.38 4.03c-.22.26-.05.65.27.65h11.08c.32 0 .49-.39.27-.65l-3.38-4.03C33.39 34.42 40 27.8 40 19.9 40 11.16 31.94 4 22 4z"/></svg>
+    LINE
+  </a>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
